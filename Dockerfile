@@ -8,6 +8,8 @@ RUN yum install python
 
 RUN yum install curl
 
+RUN yum install which
+
 RUN curl https://sdk.cloud.google.com | bash
 
 ENV PATH $PATH:/google-cloud-sdk/bin
