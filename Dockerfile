@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
-RUN ["echo","hello"]
+RUN ["echo","hello!!"]
 
 RUN apt-get install wget
 
@@ -14,4 +14,4 @@ RUN ./google-cloud-sdk/install.sh
 
 ENV PATH $PATH:/google-cloud-sdk/bin
 
-RUN ["echo","done"]
+RUN ["echo","done.."]
