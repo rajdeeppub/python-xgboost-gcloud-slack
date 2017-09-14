@@ -4,7 +4,7 @@ MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
 RUN ["echo","hello"]
 
-RUN apt-get wget
+RUN apt-get install wget
 
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
