@@ -6,6 +6,7 @@ ENV GCLOUD_SDK_VERSION 171.0.0
 
 RUN ["echo","hello"]
 
+RUN apt-get install curl
 # Create an environment variable for the correct distribution
 RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
