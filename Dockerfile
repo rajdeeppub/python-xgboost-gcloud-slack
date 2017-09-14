@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM centos:latest
 
 MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
@@ -6,18 +6,19 @@ ENV GCLOUD_SDK_VERSION 171.0.0
 
 RUN ["echo","hello"]
 
-RUN apt-get install curl
-# Create an environment variable for the correct distribution
-RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+RUN tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+[google-cloud-sdk]
+name=Google Cloud SDK
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
 
-# Add the Cloud SDK distribution URI as a package source
-RUN echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" |  tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-# Import the Google Cloud Platform public key
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-
-# Update the package list and install the Cloud SDK
-RUN apt-get install google-cloud-sdk
+# Install the Cloud SDK
+RUN yum install google-cloud-sdk
 
 ENV PATH $PATH:/google-cloud-sdk/bin
 
