@@ -12,4 +12,4 @@ RUN curl https://sdk.cloud.google.com | bash
 
 ENV PATH $PATH:/google-cloud-sdk/bin
 
-RUN ["echo","which python"]
+RUN ["echo","done"]
