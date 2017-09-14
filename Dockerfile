@@ -4,7 +4,10 @@ MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
 RUN ["echo","hello"]
 
-RUN apk curl bash python
+RUN apk add \
+	curl \
+	bash \
+	python
 
 RUN curl https://sdk.cloud.google.com | bash
 
