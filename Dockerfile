@@ -1,13 +1,12 @@
-FROM alpine:latest
+FROM centos:latest
 
 MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
 RUN ["echo","hello"]
 
-RUN apk add \
-	curl \
-	bash \
-	python
+RUN yum install python
+
+RUN yum install curl
 
 RUN curl https://sdk.cloud.google.com | bash
 
