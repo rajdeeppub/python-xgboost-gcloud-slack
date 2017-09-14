@@ -6,7 +6,7 @@ RUN ["echo","hello!!"]
 
 RUN yum install curl
 
-RUN curl -o https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
+RUN curl https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
 RUN tar -xvf google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
