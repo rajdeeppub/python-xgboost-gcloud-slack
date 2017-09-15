@@ -49,7 +49,7 @@ RUN rm -f /usr/bin/pip
 
 RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
 
-RUN pip install -U gensim
+RUN pip install -U gensim==0.13.4.1
 
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
