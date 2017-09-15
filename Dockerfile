@@ -41,6 +41,16 @@ RUN cd
 
 RUN python --version
 
+RUN wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'
+
+RUN python get-pip.py
+
+RUN rm -f /usr/bin/pip
+
+RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
+
+RUN pip install -U gensim
+
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
 RUN tar -xvf google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
