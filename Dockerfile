@@ -14,6 +14,8 @@ RUN yum -y install zsh curl wget git autoconf automake  g++ gcc make bzip2 zip  
 
 RUN yum -y install patch gdbm-devel readline-devel bzip2-devel sqlite-devel openssh-server lszrz deltarpm kmod-devel
 
+RUN yum -y install tkinter
+
 RUN yum clean all
 
 RUN mkdir -p /usr/local/python2.7.12
