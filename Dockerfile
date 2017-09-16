@@ -16,6 +16,14 @@ RUN yum -y install patch gdbm-devel readline-devel bzip2-devel sqlite-devel open
 
 RUN yum -y install tkinter
 
+RUN yum -y install tcl
+
+RUN yum -y intstall tcl-devel
+
+RUN yum -y install tk
+
+RUN yum -y install tk-devel
+
 RUN yum clean all
 
 RUN mkdir -p /usr/local/python2.7.12
