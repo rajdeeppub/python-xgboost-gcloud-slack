@@ -54,7 +54,10 @@ RUN pip install -U gensim==0.13.4.1
 RUN pip install pandas
 
 RUN pip install -U scikit-learn
+
 RUN pip install nltk
+
+RUN pip install matplotlib
 
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
@@ -62,6 +65,6 @@ RUN tar -xvf google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
 RUN ./google-cloud-sdk/install.sh
 
-ENV PATH $PATH:google-cloud-sdk/bin
+ENV PATH $PATH:/data/python/google-cloud-sdk/bin
 
 RUN ["echo","done.."]
