@@ -12,7 +12,7 @@ RUN yum -y install epel-release
 
 RUN yum -y install zsh curl wget git autoconf automake  g++ gcc make bzip2 zip  zlib zlib-devel openssl openssl-devel file libtool which
 
-RUN yum -y install patch gdbm-devel readline-devel bzip2-devel sqlite-devel openssh-server lszrz deltarpm kmod-devel tk-dev tcl-dev tcl tk 
+RUN yum -y install patch gdbm-devel readline-devel bzip2-devel sqlite-devel openssh-server lszrz deltarpm kmod-devel tk-devel tcl-devel tcl tk 
 
 RUN yum -y install tkinter
 
