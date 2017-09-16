@@ -18,11 +18,7 @@ RUN yum -y install tkinter
 
 RUN yum -y install tcl
 
-RUN yum -y intstall tcl-devel
-
 RUN yum -y install tk
-
-RUN yum -y install tk-devel
 
 RUN yum clean all
 
