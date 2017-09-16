@@ -10,7 +10,7 @@ RUN yum -y update
 
 RUN yum -y install epel-release
 
-RUN yum -y install zsh curl wget git autoconf automake  g++ gcc make bzip2 zip  zlib zlib-devel openssl openssl-devel file libtool
+RUN yum -y install zsh curl wget git autoconf automake  g++ gcc make bzip2 zip  zlib zlib-devel openssl openssl-devel file libtool which
 
 RUN yum -y install patch gdbm-devel readline-devel bzip2-devel sqlite-devel openssh-server lszrz deltarpm kmod-devel
 
@@ -54,6 +54,7 @@ RUN pip install -U gensim==0.13.4.1
 RUN pip install pandas
 
 RUN pip install -U scikit-learn
+RUN pip install nltk
 
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
