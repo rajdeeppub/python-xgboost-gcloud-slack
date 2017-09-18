@@ -2,7 +2,6 @@ FROM centos
 
 MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
-RUN ["echo","hello!!"]
 
 WORKDIR /data/python
 
@@ -37,12 +36,6 @@ RUN ln -s /usr/local/python2.7.12/bin/python /usr/bin/python
 
 RUN ln -s /usr/local/python2.7.12/bin/python-config /usr/bin/python-config
 
-RUN pwd
-
-RUN cd 
-
-RUN python --version
-
 RUN wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'
 
 RUN python get-pip.py
@@ -68,5 +61,3 @@ RUN tar -xvf google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 RUN ./google-cloud-sdk/install.sh
 
 ENV PATH $PATH:/data/python/google-cloud-sdk/bin
-
-RUN ["echo","done.."]
