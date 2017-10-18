@@ -56,7 +56,7 @@ RUN pip install matplotlib
 
 RUN pip install httplib2
 
-RUN pip install install google-api-python-client
+RUN pip install google-api-python-client
 
 RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
