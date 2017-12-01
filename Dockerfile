@@ -2,7 +2,7 @@ FROM centos
 
 MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
 
-
+RUN echo "hai"
 WORKDIR /data/python
 
 RUN yum -y update
