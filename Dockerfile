@@ -62,5 +62,6 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud
 RUN tar -xvf google-cloud-sdk-171.0.0-linux-x86_64.tar.gz
 
 RUN ./google-cloud-sdk/install.sh
+RUN pip install slackclient
 
 ENV PATH $PATH:/data/python/google-cloud-sdk/bin
