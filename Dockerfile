@@ -16,32 +16,32 @@ RUN yum -y install tkinter
 
 RUN yum clean all
 
-#RUN mkdir -p /usr/local/python2.7.12
+RUN mkdir -p /usr/local/python2.7.12
 
-#RUN wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz
+RUN wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz
 
-#RUN tar -zxvf Python-2.7.12.tgz
+RUN tar -zxvf Python-2.7.12.tgz
 
-#RUN cd /data/python/Python-2.7.12 && pwd && ./configure --prefix=/usr/local/python2.7.12 -enable-unicode=ucs4 && make \ 
-#	&& make install 
+RUN cd /data/python/Python-2.7.12 && pwd && ./configure --prefix=/usr/local/python2.7.12 -enable-unicode=ucs4 && make \ 
+	&& make install 
 	
-#RUN rm -rf Python-2.7.12
+RUN rm -rf Python-2.7.12
 
-#RUN rm -f Python-2.7.12.tgz
+RUN rm -f Python-2.7.12.tgz
 
-#RUN rm -f /usr/bin/python
+RUN rm -f /usr/bin/python
 
-#RUN ln -s /usr/local/python2.7.12/bin/python /usr/bin/python
+RUN ln -s /usr/local/python2.7.12/bin/python /usr/bin/python
 
-#RUN ln -s /usr/local/python2.7.12/bin/python-config /usr/bin/python-config
+RUN ln -s /usr/local/python2.7.12/bin/python-config /usr/bin/python-config
 
-#RUN wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'
+RUN wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'
 
-#RUN python get-pip.py
+RUN python get-pip.py
 
-#RUN rm -f /usr/bin/pip
+RUN rm -f /usr/bin/pip
 
-#RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
+RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
 
 RUN pip install oauth2client
 
