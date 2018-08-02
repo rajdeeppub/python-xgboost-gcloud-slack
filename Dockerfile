@@ -1,6 +1,6 @@
-FROM centos
+ FROM centos
 
-MAINTAINER Raveendra Annamaneni<a.raveendra432@gmail.com>
+MAINTAINER Rajdeep Mondal<mondal_rajdeep@yahoo.com>
 
 WORKDIR /data/python
 
@@ -43,7 +43,7 @@ RUN rm -f /usr/bin/pip
 
 RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
 
-RUN pip install -U gensim==0.13.4.1
+RUN pip install xgboost
 
 RUN pip install pandas
 
