@@ -1,4 +1,4 @@
- FROM centos
+FROM centos
 
 MAINTAINER Rajdeep Mondal<mondal_rajdeep@yahoo.com>
 
